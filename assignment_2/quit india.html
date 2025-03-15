@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quit India Movement</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      .page-container {
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 100vh;
+        width: 100%;
+        background-color: #d9d9d9;
+      }
+
+      /* Header styles */
+      .page-header {
+        padding: 36px 56px;
+        position: relative;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 91px;
+      }
+
+      .nav-link {
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .profile-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      /* Main content styles */
+      .main-content {
+        padding: 0 56px;
+      }
+
+      .movement-title {
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        margin-top: 33px;
+        border-top: 1px solid #000;
+        padding-top: 33px;
+      }
+
+      .movement-details {
+        display: flex;
+        margin-top: 50px;
+        gap: 34px;
+        align-items: flex-start;
+      }
+
+      .movement-image {
+        width: 529px;
+        height: 370px;
+        object-fit: cover;
+      }
+
+      .movement-description {
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        flex: 1;
+        margin: 0;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        .page-container {
+          max-width: 991px;
+        }
+
+        .navigation {
+          gap: 45px;
+        }
+
+        .nav-link {
+          font-size: 28px;
+        }
+
+        .movement-title {
+          font-size: 36px;
+        }
+
+        .movement-details {
+          flex-direction: column;
+        }
+
+        .movement-image {
+          width: 100%;
+          height: auto;
+        }
+
+        .movement-description {
+          font-size: 36px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-container {
+          max-width: 640px;
+        }
+
+        .page-header {
+          padding: 20px;
+        }
+
+        .navigation {
+          justify-content: flex-end;
+        }
+
+        .main-content {
+          padding: 0 20px;
+        }
+
+        .movement-title {
+          font-size: 28px;
+          margin-top: 20px;
+          padding-top: 20px;
+        }
+
+        .movement-description {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="page-header">
+        <nav class="navigation">
+          <a href="timelines.html" class="nav-link timeline-link">Timelines</a>
+          <a href="about_us.html" class="nav-link about-link">About Us</a>
+          <a href="profile.html">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d242305458be184ae9d8faa81c8f6c8a528c51f"
+            alt="Profile"
+            class="profile-icon"
+          />
+        </a>
+        </nav>
+      </header>
+      <main class="main-content">
+        <h1 class="movement-title">QUIT INDIA MOVEMENET(1942)</h1>
+        <section class="movement-details">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/de59762235f2293c64f9f6f0432943ff1ad68ff1"
+            alt="Quit India Movement"
+            class="movement-image"
+          />
+          <p class="movement-description">
+            The Quit India Movement, initiated by Mahatma Gandhi on August 8,
+            1942, demanded the immediate end of British rule in India. Despite
+            mass arrests and suppression, it intensified India's push for
+            independence.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

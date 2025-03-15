@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline of India's Independence</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Luxurious+Script&family=Carlito&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Main container */
+      .timeline-page {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      /* Background */
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #d9d9d9;
+      }
+
+      /* Header and navigation */
+      .header {
+        padding: 36px 56px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .navigation {
+        display: flex;
+        align-items: center;
+        gap: 91px;
+      }
+
+      .nav-link {
+        font-family: "Inter", sans-serif;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .profile-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      /* Divider line */
+      .divider {
+        width: calc(100% - 112px);
+        height: 1px;
+        margin: 0 56px;
+        background-color: #000;
+      }
+
+      /* Timeline background graphic */
+      .timeline-bg {
+        width: 379px;
+        height: 132px;
+        margin-left: 82px;
+        margin-top: -49px;
+      }
+
+      /* Page title */
+      .page-title {
+        font-family: "Luxurious Script", cursive;
+        font-size: 128px;
+        color: #000;
+        text-shadow: 6px 9px 4.5px rgba(0, 0, 0, 0.25);
+        margin-left: 163px;
+      }
+
+      /* Timeline events section */
+      .timeline-events {
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+        margin-left: 114px;
+        margin-top: 65px;
+      }
+
+      .event-item {
+        font-family: "Carlito", sans-serif;
+        font-size: 40px;
+        color: #000;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        .header {
+          padding: 24px;
+        }
+
+        .navigation {
+          gap: 40px;
+        }
+
+        .nav-link {
+          font-size: 28px;
+        }
+
+        .page-title {
+          font-size: 96px;
+          margin-left: 40px;
+        }
+
+        .timeline-events {
+          margin-left: 40px;
+          gap: 30px;
+        }
+
+        .event-item {
+          font-size: 32px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .navigation {
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .profile-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        .page-title {
+          font-size: 64px;
+          margin-left: 20px;
+          text-align: center;
+        }
+
+        .timeline-events {
+          margin-left: 20px;
+          gap: 24px;
+        }
+
+        .event-item {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="timeline-page">
+      <div class="background"></div>
+
+      <header class="header">
+        <nav class="navigation">
+          <a href="Home.html" class="nav-link">Home</a>
+          <a href="about_us.html" class="nav-link">About Us</a>
+          <a href="profile.html">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d242305458be184ae9d8faa81c8f6c8a528c51f"
+            alt="Profile"
+            class="profile-icon"
+          />
+          </a>
+        </nav>
+      </header>
+
+      <div class="divider"></div>
+
+      <div class="timeline-graphic">
+      </div>
+
+      <h1 class="page-title">Timelines</h1>
+
+      <section class="timeline-events">
+        <a href="jalbaag.html">
+        <article class="event-item">Jallianwala Bagh Massacre (1919)</article>
+        </a>
+        <a href="non cooperation.html">
+        <article class="event-item">
+          Non-Cooperation Movement (1920–1922)
+        </article>
+        </a>
+        <a href="quit india.html">
+        <article class="event-item">Quit India Movement (1942)</article>
+        </a>
+        <a href="independence.html">
+        <article class="event-item">India got independence (1947)</article>
+        </a>
+      </section>
+    </main>
+
+    <script>
+      /**
+       * JavaScript functionality for the Timeline component
+       */
+
+      // Sample data for the timeline events
+      const timelineEvents = [
+        {
+          title: "Jallianwala Bagh Massacre",
+          year: "1919",
+          description:
+            "A tragic event where British troops fired on a large crowd of unarmed Indians in Amritsar.",
+        },
+        {
+          title: "Non-Cooperation Movement",
+          year: "1920–1922",
+          description:
+            "A nationwide campaign of peaceful civil disobedience led by Mahatma Gandhi.",
+        },
+        {
+          title: "Quit India Movement",
+          year: "1942",
+          description:
+            "A movement launched by Gandhi demanding an end to British rule in India.",
+        },
+        {
+          title: "India got independence",
+          year: "1947",
+          description:
+            "India gained independence from British colonial rule on August 15, 1947.",
+        },
+      ];
+
+      // Function to initialize the timeline
+      function initTimeline() {
+        console.log("Timeline initialized with events:", timelineEvents);
+
+        // This function could be expanded to dynamically create timeline elements,
+        // add animations, or implement interactive features
+      }
+
+      // Initialize the timeline when the DOM is fully loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        initTimeline();
+      });
+    </script>
+  </body>
+</html>

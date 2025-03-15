@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Historical Events</title>
+    <style>
+      /* Base styles */
+      .about-us-page {
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        color: rgba(0, 0, 0, 1);
+        font-weight: 800;
+      }
+
+      .about-us-container {
+        background-color: rgba(217, 217, 217, 1);
+        display: flex;
+        width: 100%;
+        padding: 36px 56px 63px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      /* Header section */
+      .page-header {
+        align-self: end;
+        display: flex;
+        width: 613px;
+        max-width: 100%;
+        align-items: center;
+        gap: 40px 100px;
+        font-size: 36px;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      .navigation {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 40px 100px;
+      }
+
+      .nav-link,
+      .page-title {
+        align-self: stretch;
+        margin: auto 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        font-size: 36px;
+        font-weight: 800;
+      }
+
+      .timeline-link {
+        width: 159px;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .page-title {
+        width: 153px;
+        margin: 0;
+      }
+
+      .logo-image {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 60px;
+        align-self: stretch;
+        flex-shrink: 0;
+      }
+
+      /* Divider */
+      .section-divider {
+        border: none;
+        border-top: 5px solid rgba(0, 0, 0, 1);
+        margin-top: 37px;
+        flex-shrink: 0;
+        height: 5px;
+      }
+
+      /* Content section */
+      .content-section {
+        border-radius: 35px;
+        background-color: rgba(248, 248, 248, 1);
+        box-shadow: 16px 16px 7px rgba(0, 0, 0, 0.25);
+        align-self: center;
+        margin-top: 52px;
+        width: 100%;
+        max-width: 1228px;
+        padding: 86px 51px 66px;
+        font-size: 24px;
+      }
+
+      .about-content {
+        font-weight: 800;
+      }
+
+      .section-heading {
+        font-size: 24px;
+        font-weight: 800;
+        margin: 20px 0 10px;
+      }
+
+      .intro-paragraph,
+      .mission-text,
+      .story-text {
+        margin-bottom: 15px;
+      }
+
+      .mission-list,
+      .offerings-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .mission-list li,
+      .offerings-list li {
+        margin-bottom: 10px;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        .about-us-container {
+          max-width: 100%;
+          padding: 36px 20px 63px;
+        }
+
+        .page-header {
+          margin-right: 4px;
+        }
+
+        .section-divider {
+          max-width: 100%;
+        }
+
+        .content-section {
+          max-width: 100%;
+          padding: 86px 20px 110px;
+          margin-top: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-us-page">
+      <div class="about-us-container">
+        <header class="page-header">
+          <nav class="navigation">
+            <a href="timelines.html" class="nav-link timeline-link">Timelines</a>
+            <a href="about_us.html">
+            <h1 class="page-title">About Us</h1>
+          </a>
+          <a href="profile.html">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0934ea2a641cafd9793ad8c7ca15ddecb4f37cd67e4798c4613a1c0226e54d45?placeholderIfAbsent=true"
+              alt="Historical Events Logo"
+              class="logo-image"
+            />
+          </a>
+          </nav>
+        </header>
+
+        <hr class="section-divider" />
+
+        <main class="content-section">
+          <section class="about-content">
+            <p class="intro-paragraph">
+              Welcome to Historical events, your gateway to India's rich and
+              diverse history. Our mission is to bring the pivotal moments,
+              influential figures, and cultural milestones of India's past to
+              life, fostering a deeper understanding and appreciation of our
+              nation's heritage.
+            </p>
+
+            <h2 class="section-heading">Our Mission</h2>
+
+            <p class="mission-text">
+              At Historical events, we are dedicated to:
+            </p>
+
+            <ul class="mission-list">
+              <li>
+                <strong>Educating:</strong> Providing accurate and engaging
+                content about India's historical events.
+              </li>
+              <li>
+                <strong>Preserving:</strong> Documenting and safeguarding the
+                stories of India's past for future generations.
+              </li>
+              <li>
+                <strong>Inspiring:</strong> Encouraging a deeper appreciation
+                and understanding of India's diverse heritage.
+              </li>
+            </ul>
+
+            <h2 class="section-heading">Our Story</h2>
+
+            <p class="story-text">
+              Founded in [Year], [Your Website Name] emerged from a passion for
+              India's history and a desire to make it accessible to all.
+              Recognizing the need for a centralized platform that offers
+              well-researched and engaging historical content, we set out to
+              create a space where history enthusiasts, students, and curious
+              minds can delve into India's past.
+            </p>
+
+            <h2 class="section-heading">What We Offer</h2>
+
+            <ul class="offerings-list">
+              <li>
+                <strong>In-Depth Articles:</strong> Comprehensive write-ups on
+                significant events, movements, and figures in Indian history.
+              </li>
+              <li>
+                <strong>Timelines:</strong> Chronological overviews of key
+                historical periods and events.
+              </li>
+              <li>
+                <strong>Multimedia Content:</strong> Engaging visuals, including
+                photographs, illustrations, and videos, to complement our
+                written content.
+              </li>
+              <li>
+                <strong>Interactive Features:</strong> Quizzes, polls, and
+                discussion forums to foster a community of history enthusiasts.
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

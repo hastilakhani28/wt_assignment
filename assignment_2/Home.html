@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Experience Landing Page</title>
+    <style>
+      /* Reset styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      /* Hero Section Styles */
+      .hero {
+        background-color: #ffffff;
+        overflow: hidden;
+      }
+
+      .hero-container {
+        background-color: #cfcfcf;
+        display: flex;
+        width: 100%;
+        padding: 145px 70px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .hero-content {
+        margin-bottom: -33px;
+      }
+
+      .hero-layout {
+        gap: 20px;
+        display: flex;
+      }
+
+      .hero-text-column {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        line-height: normal;
+        width: 43%;
+        margin-left: 0;
+      }
+
+      .hero-text-wrapper {
+        margin-top: 6px;
+      }
+
+      .hero-heading {
+        color: #000000;
+        text-shadow: 0px 12px 10px rgba(0, 0, 0, 0.45);
+        font-size: 48px;
+        font-family:
+          Kantumruy,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .hero-heading-emphasis {
+        font-family:
+          Kumbh Sans,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-weight: 800;
+        font-size: 96px;
+      }
+
+      .hero-cta {
+        border-radius: 90px;
+        background-color: #2d2d2d;
+        margin-top: 113px;
+        width: 311px;
+        max-width: 100%;
+        padding: 30px 70px;
+        font-family:
+          Kumbh Sans,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 64px;
+        color: #ffffff;
+        font-weight: 800;
+        white-space: nowrap;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+      }
+
+      .hero-image-column {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        line-height: normal;
+        width: 57%;
+        margin-left: 20px;
+        margin: 0;
+      }
+
+      .hero-image {
+        aspect-ratio: 0.99;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        box-shadow: 0px 13px 8px rgba(0, 0, 0, 0.7);
+        flex-grow: 1;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 991px) {
+        .hero-container {
+          max-width: 100%;
+          padding: 100px 20px;
+        }
+
+        .hero-content {
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .hero-layout {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+
+        .hero-text-column {
+          width: 100%;
+        }
+
+        .hero-text-wrapper {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+
+        .hero-heading {
+          max-width: 100%;
+          font-size: 40px;
+        }
+
+        .hero-cta {
+          font-size: 40px;
+          padding: 30px 20px;
+          margin-top: 40px;
+          white-space: initial;
+        }
+
+        .hero-image-column {
+          width: 100%;
+        }
+
+        .hero-image {
+          max-width: 100%;
+          margin-top: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content" id="hero-content">
+          <div class="hero-layout">
+            <article class="hero-text-column">
+              <div class="hero-text-wrapper">
+                <h1 class="hero-heading">
+                  History isn't Meant to Be
+                  <br />
+                  <span class="hero-heading-emphasis">Read</span>
+                  <br />
+                  It's Meant to Be
+                  <br />
+                  <span class="hero-heading-emphasis">Lived</span>
+                </h1>
+                <a href="timelines.html">
+                <button class="hero-cta">Go</button>
+                </a>
+              </div>
+            </article>
+            <figure class="hero-image-column">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/890e3defb67e178f2e70f20ead5ee0587ae54813af7818feff2947a0734419fb?placeholderIfAbsent=true"
+                alt="Historical scene"
+                class="hero-image"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      /**
+       * Hero Section JavaScript
+       */
+      (function () {
+        // Initialize state object
+        var state = {};
+        var context = null;
+        var nodesToDestroy = [];
+        var pendingUpdate = false;
+
+        /**
+         * Removes any nodes that need to be destroyed before re-rendering
+         */
+        function destroyAnyNodes() {
+          // destroy current view template refs before rendering again
+          nodesToDestroy.forEach(function (el) {
+            return el.remove();
+          });
+          nodesToDestroy = [];
+        }
+
+        /**
+         * Updates data bindings and DOM elements based on current state
+         * Call this function when state changes and updates need to be reflected in the DOM
+         */
+        function update() {
+          if (pendingUpdate === true) {
+            return;
+          }
+          pendingUpdate = true;
+
+          // Set space attribute on hero content element
+          document.querySelectorAll("#hero-content").forEach(function (el) {
+            el.setAttribute("space", "34");
+          });
+
+          destroyAnyNodes();
+
+          pendingUpdate = false;
+        }
+
+        // Initialize the component with the first update
+        document.addEventListener("DOMContentLoaded", function () {
+          update();
+        });
+      })();
+    </script>
+  </body>
+</html>

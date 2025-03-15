@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Login container */
+      .login {
+        background-color: rgba(217, 217, 217, 1);
+        display: flex;
+        padding: 36px 56px 73px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: stretch;
+        font-family:
+          Quicksand,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        min-height: 100vh;
+      }
+
+      /* Navigation header */
+      .navigation {
+        align-self: flex-end;
+        display: flex;
+        width: 580px;
+        max-width: 100%;
+        align-items: center;
+        gap: 20px;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 36px;
+        color: rgba(0, 0, 0, 1);
+        font-weight: 800;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .nav-link {
+        align-self: stretch;
+        margin-top: auto;
+        margin-bottom: auto;
+        cursor: pointer;
+      }
+
+      .logo {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 60px;
+        align-self: stretch;
+        flex-shrink: 0;
+      }
+
+      /* Divider */
+      .divider {
+        border: none;
+        border-top: 5px solid rgba(0, 0, 0, 1);
+        margin-top: 43px;
+        flex-shrink: 0;
+        height: 5px;
+      }
+
+      /* Form container */
+      .form-container {
+        background-color: rgba(246, 246, 246, 0.96);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        align-self: center;
+        display: flex;
+        margin-top: 33px;
+        width: 528px;
+        max-width: 100%;
+        padding: 15px 80px 113px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .registration-form {
+        display: flex;
+        margin-bottom: -23px;
+        width: 220px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      /* Field labels */
+      .field-label {
+        color: rgba(0, 0, 0, 1);
+        font-size: 40px;
+        color: #1d1b20;
+        font-weight: 600;
+        margin-top: 14px;
+      }
+
+      /* Input containers */
+      .input-container {
+        border-radius: 4px 4px 0px 0px;
+        background-color: rgba(255, 255, 255, 1);
+        margin-top: 30px;
+        min-height: 39px;
+        width: 160px;
+        max-width: 100%;
+        font-family:
+          Roboto,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+      }
+
+      .input-wrapper {
+        border-radius: 4px;
+        border: 1px solid #79747e;
+        width: 100%;
+        flex: 1;
+      }
+
+      .input-field {
+        border-radius: 4px 4px 0px 0px;
+        display: flex;
+        width: 100%;
+        padding: 4px 16px;
+        align-items: flex-start;
+        gap: 4px;
+        justify-content: flex-start;
+        flex: 1;
+        height: 100%;
+      }
+
+      .input-content {
+        position: relative;
+        display: flex;
+        min-height: 48px;
+        width: 100%;
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        flex: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+      }
+
+      .text-input {
+        align-self: stretch;
+        line-height: 24px;
+        flex: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        z-index: 0;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family:
+          Roboto,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 16px;
+      }
+
+      .label-container {
+        align-items: center;
+        background-color: #fef7ff;
+        align-self: flex-start;
+        position: absolute;
+        z-index: 0;
+        display: flex;
+        min-height: 16px;
+        justify-content: flex-start;
+        left: -4px;
+        top: -12px;
+      }
+
+      /* Action buttons */
+      .action-buttons {
+        align-self: center;
+        display: flex;
+        margin-top: 37px;
+        width: 521px;
+        max-width: 100%;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .btn-clear,
+      .btn-submit {
+        border-radius: 5px;
+        background-color: rgba(121, 116, 126, 1);
+        padding: 24px 52px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: center;
+        letter-spacing: 1.53px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-submit {
+        margin-top: 7px;
+      }
+
+      /* Error styles */
+      .input-wrapper.error {
+        border-color: #b3261e;
+      }
+
+      /* Media queries */
+      @media (max-width: 991px) {
+        .login {
+          padding: 36px 20px 73px;
+        }
+
+        .navigation {
+          margin-right: 4px;
+        }
+
+        .divider {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+
+        .form-container {
+          padding: 15px 20px 100px;
+        }
+
+        .registration-form {
+          margin-bottom: 10px;
+        }
+
+        .field-label {
+          margin-left: 10px;
+        }
+
+        .input-container,
+        .input-wrapper,
+        .input-field,
+        .input-content,
+        .text-input {
+          white-space: initial;
+        }
+
+        .btn-clear,
+        .btn-submit {
+          padding: 24px 20px;
+          white-space: initial;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="login">
+      <header class="navigation">
+        <a href="Home.html">
+        <nav class="nav-link">Home</nav>
+        </a>
+        <a href="about_us.html">
+        <nav class="nav-link">About Us</nav>
+        </a>
+        <a href="profile.html">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/0934ea2a641cafd9793ad8c7ca15ddecb4f37cd67e4798c4613a1c0226e54d45?placeholderIfAbsent=true"
+          class="logo"
+          alt="Logo"
+        />
+        </a>
+      </header>
+
+      <hr class="divider" />
+
+      <section class="form-container">
+        <form class="registration-form">
+          <label class="field-label">Name</label>
+          <div class="input-container">
+            <div class="input-wrapper">
+              <div class="input-field">
+                <div class="input-content">
+                  <input type="text" class="text-input" placeholder="Name" />
+                  <div class="label-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <label class="field-label">Last Name</label>
+          <div class="input-container">
+            <div class="input-wrapper">
+              <div class="input-field">
+                <div class="input-content">
+                  <input
+                    type="text"
+                    class="text-input"
+                    placeholder="Last Name"
+                  />
+                  <div class="label-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <label class="field-label">User Name</label>
+          <div class="input-container">
+            <div class="input-wrapper">
+              <div class="input-field">
+                <div class="input-content">
+                  <input
+                    type="text"
+                    class="text-input"
+                    placeholder="Username"
+                  />
+                  <div class="label-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <label class="field-label">Email</label>
+          <div class="input-container">
+            <div class="input-wrapper">
+              <div class="input-field">
+                <div class="input-content">
+                  <input type="email" class="text-input" placeholder="Email" />
+                  <div class="label-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <label class="field-label">Password</label>
+          <div class="input-container">
+            <div class="input-wrapper">
+              <div class="input-field">
+                <div class="input-content">
+                  <input
+                    type="password"
+                    class="text-input"
+                    placeholder="Password"
+                  />
+                  <div class="label-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <footer class="action-buttons">
+        <button type="button" class="btn-clear" id="clearBtn">Clear</button>
+        <button type="submit" class="btn-submit" id="submitBtn">Submit</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

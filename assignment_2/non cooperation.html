@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline - Non-Cooperation Movement</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      .page-container {
+        background-color: #d9d9d9;
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      /* Header styles */
+      .header {
+        padding: 36px 56px 0;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 91px;
+        margin-bottom: 22px;
+      }
+
+      .nav-link {
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .profile-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .header-divider {
+        height: 1px;
+        background-color: #000;
+        margin: 0 56px;
+      }
+
+      /* Main content styles */
+      .main-content {
+        padding: 57px 95px;
+      }
+
+      .movement-title {
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 85px;
+      }
+
+      .movement-details {
+        display: flex;
+        gap: 56px;
+        align-items: flex-start;
+      }
+
+      .movement-image {
+        width: 543px;
+        height: 267px;
+        object-fit: contain;
+      }
+
+      .movement-description {
+        font-size: 40px;
+        font-style: italic;
+        font-weight: 800;
+        color: #000;
+        max-width: 750px;
+        margin: 0;
+      }
+
+      /* Media queries */
+      @media (max-width: 991px) {
+        .navigation {
+          gap: 45px;
+        }
+
+        .nav-link {
+          font-size: 28px;
+        }
+
+        .main-content {
+          padding: 40px;
+        }
+
+        .movement-title {
+          font-size: 36px;
+          margin-bottom: 40px;
+        }
+
+        .movement-details {
+          flex-direction: column;
+        }
+
+        .movement-image {
+          width: 100%;
+          height: auto;
+        }
+
+        .movement-description {
+          font-size: 32px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .header {
+          padding: 20px 20px 0;
+        }
+
+        .navigation {
+          gap: 20px;
+        }
+
+        .profile-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        .main-content {
+          padding: 20px;
+        }
+
+        .movement-title {
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+
+        .movement-description {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="header">
+        <nav class="navigation">
+          <a href="timelines.html" class="nav-link timeline-link">Timelines</a>
+          <a href="about_us.html" class="nav-link about-link">About Us</a>
+          <a href="profile.html">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d242305458be184ae9d8faa81c8f6c8a528c51f"
+            alt="Profile"
+            class="profile-icon"
+          />
+        </a>
+        </nav>
+        <div class="header-divider"></div>
+      </header>
+
+      <main class="main-content">
+        <h1 class="movement-title">NON COOPERATION MOVEMENT(1920-1922)</h1>
+        <section class="movement-details">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/52e620e6a6aeb517025e5babd3884af8b2af5365"
+            alt="Non-Cooperation Movement"
+            class="movement-image"
+          />
+          <p class="movement-description">
+            The Non-Cooperation Movement (1920-1922), led by Mahatma Gandhi, was
+            a peaceful protest against British rule in India. It involved
+            boycotting British goods, institutions, and honors, promoting
+            self-reliance through indigenous products, and striving for
+            self-governance. The movement was suspended after the Chauri Chaura
+            incident in 1922.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      /**
+       * TypeScript support for the Timeline page
+       */
+      // Define types for any data that might be used
+      // Example of how to type data for this component
+      var nonCooperationMovement = {
+        title: "NON COOPERATION MOVEMENT",
+        period: "1920-1922",
+        description:
+          "The Non-Cooperation Movement (1920-1922), led by Mahatma Gandhi, was a peaceful protest against British rule in India. It involved boycotting British goods, institutions, and honors, promoting self-reliance through indigenous products, and striving for self-governance. The movement was suspended after the Chauri Chaura incident in 1922.",
+        imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/52e620e6a6aeb517025e5babd3884af8b2af5365",
+      };
+      // This file can be extended with additional functionality as needed
+      // For example, fetching timeline data from an API, adding interactivity, etc.
+    </script>
+  </body>
+</html>

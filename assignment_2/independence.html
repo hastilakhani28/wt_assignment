@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historical Timeline - India's Independence</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Caprasimo&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+
+      .page-container {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #d9d9d9;
+      }
+
+      /* Header styles */
+      .page-header {
+        padding: 36px 56px 0;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 91px;
+        margin-bottom: 22px;
+      }
+
+      .nav-item {
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 800;
+      }
+
+      .nav-title,
+      .nav-link {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .profile-icon {
+        width: 60px;
+        height: 60px;
+        margin-left: 91px;
+      }
+
+      .header-divider {
+        height: 1px;
+        margin: 0 56px;
+        background-color: #000;
+        border: none;
+      }
+
+      /* Timeline content styles */
+      .timeline-content {
+        padding: 51px 111px;
+      }
+
+      .event-title {
+        color: #000;
+        font-family: "Caprasimo", cursive;
+        font-size: 64px;
+        margin-bottom: 139px;
+        font-weight: normal;
+      }
+
+      .event-details {
+        display: flex;
+        gap: 32px;
+      }
+
+      .event-image {
+        width: 533px;
+        height: 320px;
+        object-fit: cover;
+      }
+
+      .event-description {
+        flex: 1;
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      /* Media queries */
+      @media (max-width: 991px) {
+        .navigation {
+          gap: 45px;
+        }
+
+        .nav-item {
+          font-size: 28px;
+        }
+
+        .profile-icon {
+          margin-left: 45px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .timeline-content {
+          padding: 40px;
+        }
+
+        .event-title {
+          font-size: 48px;
+          margin-bottom: 80px;
+        }
+
+        .event-details {
+          flex-direction: column;
+        }
+
+        .event-image {
+          width: 100%;
+          height: auto;
+        }
+
+        .event-description {
+          font-size: 36px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-header {
+          padding: 20px 20px 0;
+        }
+
+        .navigation {
+          gap: 20px;
+        }
+
+        .profile-icon {
+          margin-left: auto;
+          width: 40px;
+          height: 40px;
+        }
+
+        .header-divider {
+          margin: 0 20px;
+        }
+
+        .timeline-content {
+          padding: 20px;
+        }
+
+        .event-title {
+          font-size: 36px;
+          margin-bottom: 40px;
+        }
+
+        .event-description {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-container">
+      <header class="page-header">
+        <nav class="navigation">
+            <a href="timelines.html">
+          <h1 class="nav-item nav-title">Timelines</h1>
+          </a>
+          <a href="about_us.html" class="nav-item nav-link">About Us</a>
+          <a href="profile.html">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d242305458be184ae9d8faa81c8f6c8a528c51f"
+            alt="Profile"
+            class="profile-icon"
+          />
+        </a>
+        </nav>
+        <hr class="header-divider" />
+      </header>
+
+      <section class="timeline-content">
+        <h2 class="event-title">India got independence (1947)</h2>
+        <article class="event-details">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/eef174e8d2a3219752c18490ffef2aa9f5c76844"
+            alt="Indian Independence"
+            class="event-image"
+          />
+          <p class="event-description">
+            On August 15, 1947, India achieved independence from British rule
+            through the Indian Independence Act. This legislation led to the
+            partition of British India into two sovereign nations: India and
+            Pakistan. The transition was marked by significant challenges,
+            including mass migrations and communal violence, as millions
+            relocated based on religious affiliations.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      /**
+       * JavaScript for the Timeline component
+       */
+
+      // Example function to handle navigation (not used in current implementation)
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+
+      // Example function to load timeline events (for future enhancement)
+      function loadTimelineEvents() {
+        // This would typically fetch from an API or data source
+        return [
+          {
+            title: "India got independence",
+            year: 1947,
+            description:
+              "On August 15, 1947, India achieved independence from British rule through the Indian Independence Act. This legislation led to the partition of British India into two sovereign nations: India and Pakistan. The transition was marked by significant challenges, including mass migrations and communal violence, as millions relocated based on religious affiliations.",
+            imageUrl:
+              "https://cdn.builder.io/api/v1/image/assets/TEMP/eef174e8d2a3219752c18490ffef2aa9f5c76844",
+          },
+          // Additional events could be added here
+        ];
+      }
+
+      // Initialize any event listeners when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Example: Add click event to profile icon
+        const profileIcon = document.querySelector(".profile-icon");
+        if (profileIcon) {
+          profileIcon.addEventListener("click", function () {
+            console.log("Profile icon clicked");
+            // Additional functionality could be added here
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
